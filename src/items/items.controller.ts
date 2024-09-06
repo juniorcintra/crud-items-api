@@ -9,7 +9,6 @@ import {
 } from '@nestjs/common';
 import { ItemsService } from './items.service';
 import { CreateItemDto } from './dto/create-item.dto';
-import { UpdateItemDto } from './dto/update-item.dto';
 
 @Controller('items')
 export class ItemsController {
@@ -31,7 +30,7 @@ export class ItemsController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateItemDto: UpdateItemDto) {
+  update(@Param('id') id: string, @Body() updateItemDto: CreateItemDto) {
     return this.itemsService.update(+id, updateItemDto);
   }
 

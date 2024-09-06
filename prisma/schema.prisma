@@ -25,7 +25,7 @@ model Item {
   id        Int    @id @default(autoincrement())
   descricao String
   nome      String
-  image     String @db.Text
+  image     String? @db.Text
   author    User   @relation(fields: [authorId], references: [id])
   authorId  Int
 }

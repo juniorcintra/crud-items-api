@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "0e33ec4b-9e56-45e3-9b22-e71c35ca6f88",
+		"name": "crud-items",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32142517",
+		"_collection_link": "https://cloudy-sunset-846057.postman.co/workspace/CRUD-items~8b661b71-fafb-4036-a891-ce567cf73d4b/collection/32142517-0e33ec4b-9e56-45e3-9b22-e71c35ca6f88?action=share&source=collection_link&creator=32142517"
+	},
+	"item": [
+		{
+			"name": "UserCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"teste3@teste.com\",\r\n    \"name\": \"Junior Cintra\",\r\n    \"password\": \"asdfdsfasdfasdf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ItemCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"teste@teste.com\",\r\n    \"descricao\": \"Junior Cintra\",\r\n    \"authorId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/items",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ItemUpdate",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"teste@teste.com\",\r\n    \"descricao\": \"Juniorasdfasdfs Cintra\",\r\n    \"authorId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/items/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"items",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ItemListAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"teste@teste.com\",\r\n    \"descricao\": \"Junior Cintra\",\r\n    \"authorId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/items",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ItemListById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"teste@teste.com\",\r\n    \"descricao\": \"Junior Cintra\",\r\n    \"authorId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/items/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"items",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ItemDelete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"teste@teste.com\",\r\n    \"descricao\": \"Junior Cintra\",\r\n    \"authorId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/items/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"items",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
