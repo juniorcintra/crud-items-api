@@ -30,6 +30,8 @@ $ npx prisma studio
 
 http://localhost:3000/api
 
+![alt text](image.png)
+
 ## Postman
 
 O arquivo JSON com a collection do postman se encontra junto ao código.
