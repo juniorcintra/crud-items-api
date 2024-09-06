@@ -6,7 +6,10 @@ import {
   Patch,
   Param,
   Delete,
+  Res,
+  HttpStatus,
 } from '@nestjs/common';
+import { Response } from 'express';
 import { ItemsService } from './items.service';
 import { CreateItemDto } from './dto/create-item.dto';
 
@@ -22,6 +25,29 @@ export class ItemsController {
   @Get()
   findAll() {
     return this.itemsService.findAll();
+  }
+
+  @Get('exportItems')
+  async exportItemsExcel(@Res() res: Response) {
+    try {
+      const excelBuffer = await this.itemsService.generateExcelItems();
+
+      res.setHeader(
+        'Content-Type',
+        'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+      );
+      res.setHeader(
+        'Content-Disposition',
+        'attachment; filename=profissionais.xlsx',
+      );
+
+      res.send(excelBuffer);
+    } catch (error) {
+      console.error('Error generating Excel', error);
+      res.status(HttpStatus.INTERNAL_SERVER_ERROR).send({
+        error: { description: error.message },
+      });
+    }
   }
 
   @Get(':id')
