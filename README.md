@@ -19,9 +19,11 @@ $ npx prisma generate
 ### Prisma studio
 
 ```bash
+$ npx prisma migrate dev
+
+
 $ npx prisma studio
 
-$ npx prisma migrate dev
 ```
 
 ## Swagger
